@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>ECサイト</title>
+    <link href="/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" /> 
+    <script src="/js/register.js" th:src="@{/js/register.js}"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script>
+	$(() => {
+		$('#registerBtn').on('click', registe);
+	});
+</script>
+</head>
+
+<body>
+  <header>
+     <h2>新規ユーザー登録</h2>
+  </header>
+      <form name="registerForm" id="registerForm" method="post">
+        <p>ユーザー名:<input type="text" name="userName" required/></p>
+        <p>パスワード　:<input type="password" name="password" required/></p>
+        <p>フルネーム:<input type="text" name="fullName" required/></p>
+        <button id="registerBtn">登録</button>
+      </form>    
+</body>
+</html>
